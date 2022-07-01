@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "tnLh1AVs1I/OIUaq2o1eHVslbOjDPV6N7RtWucZuNPHXyy60SnlV6Eh6CAGkfQenmkDyUQdggfsWhZucOr5CgA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\leonardo.russi\\Source\\Repos\\github-gateway\\githubApi.Models\\githubApi.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\leonardo.russi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

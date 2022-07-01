@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>githubApi</name>
+    </assembly>
+    <members>
+        <member name="T:githubApi.Controllers.AuthenticationController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:githubApi.Controllers.AuthenticationController.#ctor(githubApi.Facades.Interfaces.IJwtAuthenticationFacade)">
+            <summary>
+            
+            </summary>
+            <param name="jwtAuthenticationFacade"></param>
+        </member>
+        <member name="M:githubApi.Controllers.AuthenticationController.AuthenticateAsync(githubApi.Models.Jwt.AuthenticationRequest)">
+            <summary>
+            
+            </summary>
+            <param name="authentication"></param>
+            <returns></returns>
+        </member>
+        <member name="T:githubApi.Controllers.GithubRepoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:githubApi.Controllers.GithubRepoController.#ctor(githubApi.Facades.Interfaces.IGithubReposFacade)">
+            <summary>
+            
+            </summary>
+            <param name="githubRepoFacade"></param>
+        </member>
+        <member name="M:githubApi.Controllers.GithubRepoController.GetReposAsync(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="username"></param>
+            <param name="language"></param>
+            <returns></returns>
+        </member>
+        <member name="T:githubApi.Middleware.ErrorHandlingMiddleware">
+            <summary>
+            Wraps all controller actions with a try-catch latch to avoid code repetition
+            </summary>
+        </member>
+        <member name="M:githubApi.Middleware.ErrorHandlingMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invoke Method, to validate requisition errors
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

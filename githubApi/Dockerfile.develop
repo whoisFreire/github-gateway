@@ -1,0 +1,20 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0
+ARG BUILD_CONFIGURATION=Debug
+ENV ASPNETCORE_ENVIRONMENT=Development
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
+EXPOSE 80
+
+WORKDIR /src
+COPY ["githubApi.Facades/githubApi.Facades.csproj", "githubApi.Facades/"]
+COPY ["githubApi.Models/githubApi.Models.csproj", "githubApi.Models/"]
+COPY ["githubApi.Services/githubApi.Services.csproj", "githubApi.Services/"]
+COPY ["githubApi/githubApi.csproj", "githubApi/"]
+
+RUN dotnet restore "githubApi/githubApi.csproj"
+COPY . .
+WORKDIR "/src/githubApi"
+RUN dotnet build --no-restore "githubApi.csproj" -c $BUILD_CONFIGURATION
+
+RUN echo "exec dotnet run --no-build --no-launch-profile -c $BUILD_CONFIGURATION --" > /entrypoint.sh
+
+ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
